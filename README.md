@@ -1,6 +1,6 @@
 # Sinahala Lyrics Search Engine
 
-![alt text](frontend.png)
+![alt text](ui.png)
 
 ## Quick Start
 To start the search engine follow the instructions given below.
