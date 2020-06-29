@@ -6,13 +6,29 @@
 To start the search engine follow the instructions given below.
 
 - Start an solr on the port 8983
+- Copy the ```solr configuration``` folder to solr-xxx/server/solr/
+- Rename folder to other name (This is the name of the core)
+- Create the core using solr admin
+- Add the docs in ```Data``` folder to solr core. Use solr admin or following commands to add docs.
+    - Windows : ```java -Dc=core_name -jar post.jar song.xml```
+    - Linux : ```./post -c songs songs.xml```
 - Run the command ```ng serve```  inside search-ui directory
 - Visit <a href="http://localhost:4200">http://localhost:4200</a>
 - Enter the search query in the search box in the website
 
 
-For more details on deploying<br>
-- [search ui](search-ui/README.md)
+Refer [README.md](search-ui/README.md) for more details on setting up the frontend
+
+## Main Functionalities
+- Synonyms support
+- Stop words support
+- Stemming support
+- Protected stemming support
+- Spell check suggetions
+- Wild card queries
+- Range queries
+- Faceted queries
+- Other queries such as term query, phrase query 
 
 
 ## Structure of the Data
@@ -28,6 +44,8 @@ Each song contains the following data fields. The data is scraped from <a href="
 ```beat:``` beat of the song<br>
 ```visits:``` no of views for the song in original site<br>
 ```lyrics:``` lyric (each line seperated by a \n character)<br>
+
+Refer  [README.md](Preprocess/README.md) for more details on scraping and preprocessing data.
 
 ## Indexing and Querying Techniques Used
 
