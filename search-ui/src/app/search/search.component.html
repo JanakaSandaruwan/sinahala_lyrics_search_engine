@@ -1,0 +1,27 @@
+<form class="example-form">
+      <input style="width: 50%; height: 4vh;" placeholder="Enter the search query." type="text" [(ngModel)]="query" name="query" (keyup.enter)="getResult()">
+</form>
+
+<br>
+
+<div>
+    
+        <div *ngFor="let doc of results">
+          <div style="background-color: cornsilk; padding-left: 20px; padding-top: 20px;">
+            <div><b>Artist : </b>{{doc.artist}} &#160;&#160;&#160; <b>Music : </b> {{doc.music}} &#160;&#160;&#160; <b>Lyrics by : </b> {{doc.lyrics_by}}</div>
+            <div><b>Genre : </b>{{doc.genre}} &#160;&#160;&#160; <b>Beat : </b> {{doc.beat}} &#160;&#160;&#160; <b>Visits : </b> {{doc.visits}} &#160;&#160;&#160; <b>Key : </b></div>
+            <!-- <div>Music : {{doc.music}}</div> -->
+            <!-- <div>Lyrics by : {{doc.lyrics_by}}</div> -->
+            <!-- <div>Beat : {{doc.beat}}</div> -->
+            <!-- <div>Visits : {{doc.visits}}</div> -->
+            <div><b>Song Name: </b> {{doc.name}}</div>
+            <br>
+            <!-- <div>Key : {{doc.key}}</div> -->
+            <div style="white-space: pre-line">{{ doc.lyrics }}</div>
+            <br>
+          </div>
+          <hr>
+        <br>
+        </div>
+      
+</div>
