@@ -19,6 +19,16 @@ To start the search engine follow the instructions given below.
 
 Refer [README.md](search-ui/README.md) for more details on setting up the frontend
 
+## Directory Structure
+The important files and directories of the repository is shown below ├── <br>
+├── Data : Preprocessed data<br>
+├── LyricsScraper : Files related to Scrape<br>
+├── Preprocess  <br>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── preprocess.py : To preprocess scraped json<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── singlish_to_si.py : To translate English to Sinhala <br>
+├── search-ui : UI related files<br>
+├── solr configurations : <br>
+
 ## Main Functionalities
 - Synonyms support
 - Stop words support
@@ -33,7 +43,7 @@ Refer [README.md](search-ui/README.md) for more details on setting up the fronte
 #### Sample queries with UI
 - Songs by artist, music and lyrics writer<br>
     *Ex:-*
-     - පණ්ඩිත් අමරදේව ගැයූ ගීත
+     - අමරදේව ගැයූ ගීත
      - සුනිල් ආරියරත්න ලියූ ගීත
 - Range queries<br>
     *Ex:-* 
@@ -85,7 +95,17 @@ Each song contains the following data fields. The data is scraped from <a href="
 ```visits:``` no of views for the song in original site<br>
 ```lyrics:``` lyric (each line seperated by a \n character)<br>
 
-Refer  [README.md](Preprocess/README.md) for more details on scraping and preprocessing data.
+##### Creating the dataset
+Prepared ```songs.json``` is inside the ```Data``` folder. If need, dataset can be created by following below steps.
+
+- Prepare <a href="https://docs.scrapy.org/en/latest/">scrapy</a> enviornment.
+- Scrape data from <a href="https://sinhalasongbook.com/">sinhalasongbook.com</a><br>
+  Use the following command inside ```spider``` folder inside ```LyricsScraper```<br>
+  
+  >scrapy crawl lyrics
+
+- Use `preprocess.py` inside `Preprocess` folder for preprocessing scraped json file. (Give path of the json to that .py file)
+- Use `singlish_to_si.py` to translate English to Sinhala. <a href="https://pypi.org/project/googletrans/">googletrans</a> is used for translations.
 
 ## Indexing and Querying Techniques Used
 
