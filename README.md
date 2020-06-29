@@ -10,6 +10,11 @@ To start the search engine follow the instructions given below.
 - Visit <a href="http://localhost:4200">http://localhost:4200</a>
 - Enter the search query in the search box in the website
 
+
+For more details on deploying<br>
+- [search ui](search-ui/README.md)
+
+
 ## Structure of the Data
 
 Each song contains the following data fields. The data is scraped from <a href="https://sinhalasongbook.com/">sinhalasongbook.com</a><br>
@@ -25,5 +30,21 @@ Each song contains the following data fields. The data is scraped from <a href="
 ```lyrics:``` lyric (each line seperated by a \n character)<br>
 
 ## Indexing and Querying Techniques Used
+
+### Indexing Filters
+- Tokenizer
+- Prot Words Filter
+- Stop Words Filter
+- Hunspell Stem Filter Factory for stemming
+
+
+### Query Filters
+- Tokenizer
+- Spell checker
+- Prot Words Filter
+- Stop Words Filter
+- Synonym Filter
+- Hunspell Stem Filter Factory for Stemming
+- Remove Duplicate Filter 
 
 
