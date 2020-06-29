@@ -50,7 +50,7 @@ The important files and directories of the repository is shown below ├── <
 - Range queries<br>
     *Ex:-* 
     - නැරඹුම් වාර 5000 ට වැඩි ගීත
-    - හොඳම​සිංදු 10
+    - හොදම ​සිංදු
 - Phrase queries<br>
     *Ex:-*
     - "සුනිල් ආරියරත්න" ලියූ ගීත

@@ -14,7 +14,8 @@ export class SearchserviceService {
   public get(searchTerm: string) {
     return this.http.get<Result>("http://localhost:8983/solr/songs_final/select",{
       params : {
-        q : searchTerm
+        q : searchTerm,
+        rows : '700'
       }
     })
       .pipe(
@@ -26,7 +27,8 @@ export class SearchserviceService {
     return this.http.get<Result>("http://localhost:8983/solr/songs_final/select",{
       params : {
         q : '*',
-        sort : 'visits desc'
+        sort : 'visits desc',
+        rows : '700'
       }
     })
       .pipe(
@@ -37,7 +39,8 @@ export class SearchserviceService {
   public getArtist(searchTerm : string) {
     return this.http.get<Result>("http://localhost:8983/solr/songs_final/select",{
       params : {
-        q : 'artist : '.concat(searchTerm)
+        q : 'artist : '.concat(searchTerm),
+        rows : '700'
       }
     })
       .pipe(
@@ -48,7 +51,8 @@ export class SearchserviceService {
   public getMusic(searchTerm : string) {
     return this.http.get<Result>("http://localhost:8983/solr/songs_final/select",{
       params : {
-        q : 'music : '.concat(searchTerm)
+        q : 'music : '.concat(searchTerm),
+        rows : '700'
       }
     })
       .pipe(
@@ -59,7 +63,8 @@ export class SearchserviceService {
   public getLyricsBy(searchTerm : string) {
     return this.http.get<Result>("http://localhost:8983/solr/songs_final/select",{
       params : {
-        q : 'lyrics_by : '.concat(searchTerm)
+        q : 'lyrics_by : '.concat(searchTerm),
+        rows : '700'
       }
     })
       .pipe(
@@ -71,7 +76,8 @@ export class SearchserviceService {
     return this.http.get<Result>("http://localhost:8983/solr/songs_final/select",{
       params : {
         q : 'visits : ['+searchTerm+' TO *]',
-        sort : 'visits asc'
+        sort : 'visits asc',
+        rows : '700'
       }
     })
       .pipe(
@@ -83,7 +89,8 @@ export class SearchserviceService {
     return this.http.get<Result>("http://localhost:8983/solr/songs_final/select",{
       params : {
         q : 'visits : [ * TO '+searchTerm+']',
-        sort : 'visits asc'
+        sort : 'visits asc',
+        rows : '700'
       }
     })
       .pipe(
