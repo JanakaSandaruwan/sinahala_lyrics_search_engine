@@ -30,6 +30,37 @@ Refer [README.md](search-ui/README.md) for more details on setting up the fronte
 - Faceted queries
 - Other queries such as term query, phrase query 
 
+#### Sample queries with UI
+- Songs by artist, music and lyrics writer<br>
+    *Ex:-*
+     - පණ්ඩිත් අමරදේව ගැයූ ගීත
+     - සුනිල් ආරියරත්න ලියූ ගීත
+- Range queries<br>
+    *Ex:-* 
+    - නැරඹුම් වාර 5000 ට වැඩි ගීත
+    - හොඳම​සිංදු 10
+- Phrase queries<br>
+    *Ex:-*
+    - "සුනිල් ආරියරත්න" ලියූ ගීත
+- Wild card queries<br>
+    *Ex:-*
+    - අමර* ගැයූ ගීත
+- Synonyms<br>
+    *Ex:-*
+     - මව ගැන ගීත
+- Stop words eliminated<br>
+   *Ex:-*
+   - ඇන්ජලීන් ගුණතිලක  හා එච්.ආර්. ජෝතිපාල ගේ ගීත
+- Queries with stemming<br>
+    *Ex:-*
+    - බියෙන් සැකෙන්
+- Others<br>
+    *Ex:-* 
+    - පැරණි පොප්
+    - අහසයි ඔබ මට නිම් හිම් නොපෙනෙන ගීතයේ පද
+
+#### Sample queries with Solr terminal
+
 
 ## Structure of the Data
 
