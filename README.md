@@ -61,6 +61,15 @@ Refer [README.md](search-ui/README.md) for more details on setting up the fronte
 
 #### Sample queries with Solr terminal
 
+![alt text](solr-ui.png)
+
+- Spell check suggetions <br>
+    *Ex:-* 
+     - searching අමරදව gives අමරදේව
+ - Facet Search <br>
+    *Ex:-*
+    - Get count of genre type
+ - The queries in above section can also be done on solr ui. 
 
 ## Structure of the Data
 
