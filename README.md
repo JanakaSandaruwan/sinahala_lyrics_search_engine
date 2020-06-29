@@ -10,8 +10,8 @@ To start the search engine follow the instructions given below.
 - Rename folder to other name (This is the name of the core)
 - Create the core using solr admin
 - Add the docs in ```Data``` folder to solr core. Use solr admin or following commands to add docs.
-    - Windows : ```java -Dc=core_name -jar post.jar song.xml```
-    - Linux : ```./post -c songs songs.xml```
+    - Windows : ```java -Dc=core_name -jar post.jar song.json```
+    - Linux : ```./post -c core_name songs.json```
 - Run the command ```ng serve```  inside search-ui directory
 - Visit <a href="http://localhost:4200">http://localhost:4200</a>
 - Enter the search query in the search box in the website
@@ -21,7 +21,9 @@ Refer [README.md](search-ui/README.md) for more details on setting up the fronte
 
 ## Directory Structure
 The important files and directories of the repository is shown below ├── <br>
-├── Data : Preprocessed data<br>
+├── Data <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── original.json: scraped original data<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── songs.json : preprocess and translated data<br>
 ├── LyricsScraper : Files related to Scrape<br>
 ├── Preprocess  <br>
  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── preprocess.py : To preprocess scraped json<br>
