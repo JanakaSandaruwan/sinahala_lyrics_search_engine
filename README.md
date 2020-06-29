@@ -76,10 +76,13 @@ The important files and directories of the repository is shown below ├── <
 - Spell check suggetions <br>
     *Ex:-* 
      - searching අමරදව gives අමරදේව
- - Facet Search <br>
+- Facet Search <br>
     *Ex:-*
     - Get count of genre type
- - The queries in above section can also be done on solr ui. 
+- Protected stemming <br>
+    *Ex:-*
+    - artist : නන්දා මාලනී
+- The queries in above section can also be done on solr ui. 
 
 ## Structure of the Data
 
