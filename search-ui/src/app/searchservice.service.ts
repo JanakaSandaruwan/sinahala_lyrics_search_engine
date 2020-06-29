@@ -12,7 +12,7 @@ export class SearchserviceService {
   constructor(protected http: HttpClient) { }
 
   public get(searchTerm: string) {
-    return this.http.get<Result>("http://localhost:8983/solr/songs_new/select",{
+    return this.http.get<Result>("http://localhost:8983/solr/songs_final/select",{
       params : {
         q : searchTerm
       }
@@ -23,7 +23,7 @@ export class SearchserviceService {
   }
 
   public getTopSongs() {
-    return this.http.get<Result>("http://localhost:8983/solr/songs_new/select",{
+    return this.http.get<Result>("http://localhost:8983/solr/songs_final/select",{
       params : {
         q : '*',
         sort : 'visits desc'
@@ -35,7 +35,7 @@ export class SearchserviceService {
   }
 
   public getArtist(searchTerm : string) {
-    return this.http.get<Result>("http://localhost:8983/solr/songs_new/select",{
+    return this.http.get<Result>("http://localhost:8983/solr/songs_final/select",{
       params : {
         q : 'artist : '.concat(searchTerm)
       }
@@ -46,7 +46,7 @@ export class SearchserviceService {
   }
 
   public getMusic(searchTerm : string) {
-    return this.http.get<Result>("http://localhost:8983/solr/songs_new/select",{
+    return this.http.get<Result>("http://localhost:8983/solr/songs_final/select",{
       params : {
         q : 'music : '.concat(searchTerm)
       }
@@ -57,7 +57,7 @@ export class SearchserviceService {
   }
 
   public getLyricsBy(searchTerm : string) {
-    return this.http.get<Result>("http://localhost:8983/solr/songs_new/select",{
+    return this.http.get<Result>("http://localhost:8983/solr/songs_final/select",{
       params : {
         q : 'lyrics_by : '.concat(searchTerm)
       }
@@ -68,7 +68,7 @@ export class SearchserviceService {
   }
 
   public getGreaterThanVisits(searchTerm : string) {
-    return this.http.get<Result>("http://localhost:8983/solr/songs_new/select",{
+    return this.http.get<Result>("http://localhost:8983/solr/songs_final/select",{
       params : {
         q : 'visits : ['+searchTerm+' TO *]',
         sort : 'visits asc'
@@ -80,7 +80,7 @@ export class SearchserviceService {
   }
 
   public getLowerThanVisits(searchTerm : string) {
-    return this.http.get<Result>("http://localhost:8983/solr/songs_new/select",{
+    return this.http.get<Result>("http://localhost:8983/solr/songs_final/select",{
       params : {
         q : 'visits : [ * TO '+searchTerm+']',
         sort : 'visits asc'
